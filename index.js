@@ -121,11 +121,19 @@ console.log(newtotal)
 
 
 
-// secquence the values highest to lowest
+// sequence the values highest to lowest
 
 numonly.sort(function(a,b) {
-    return a-b};)
-    console.log(numonly)
+    return a-b});
+
+console.log(numonly)
+
+var lowest = numonly[0];
+var highest = numonly[numonly.length - 1]
+
+console.log("Greatest Increase in Profits: " + highest)
+console.log("Greatest Decrease in Profits: " + lowest)
+
 
 // select the first and last
 
