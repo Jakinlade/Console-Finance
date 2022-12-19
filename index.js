@@ -96,6 +96,7 @@ console.log("Total Months: " + finances.length);
 var totalsum = 0;
 for (var i = 0; i < finances.length; i++) {
     totalsum = totalsum + finances[i][1];
+    
 }
 
 console.log("Total: $" + totalsum)
@@ -109,24 +110,14 @@ var numonly = [];
 for (var i = 0; i < finances.length; i++) {
     numonly.push (finances[i][1]);
 }
-console.log(numonly);
-
-var newtotal = 0;
-for (var i = 0; i < numonly.length; i++) {
-    newtotal = newtotal + numonly[i];
-}
-console.log(newtotal)
-
-
-
-
+// console.log(numonly);
 
 // sequence the values highest to lowest
 
 numonly.sort(function(a,b) {
     return a-b});
 
-console.log(numonly)
+// console.log(numonly)
 
 var lowest = numonly[0];
 var highest = numonly[numonly.length - 1]
@@ -138,3 +129,37 @@ console.log("Greatest Decrease in Profits: " + lowest)
 // select the first and last
 
 // console.log(finaces[1])
+
+function diff(numonly) {
+    changes = [];
+    for(var i=0; i < numonly.length-1; i++){
+        changes.push(numonly[i+1]-numonly[i]);
+
+    }
+   console.log(changes);
+}
+
+// 2nd try
+
+function diff (arr){
+    diffArr=[];
+    for(var i=0; i<arr.length-1; i++){
+        diffArr.push(arr[i+1]-arr[i]);
+
+    }
+    return diffArr;
+}
+console.log(diff(numonly));
+
+console.log(diffArr)
+
+
+// test
+
+var totaldiff = 0;
+for (var i = 0; i < diffArr.length; i++) {
+    totaldiff = totaldiff + diffArr[i];
+
+}
+
+console.log(totaldiff)
