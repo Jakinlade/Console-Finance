@@ -93,7 +93,7 @@ console.log("Total Months: " + finances.length);
 // isolate 2nd values from the each array
 // add all values together
 
-var totalsum = 0;
+let totalsum = 0;
 for (var i = 0; i < finances.length; i++) {
     totalsum = totalsum + finances[i][1];
     
@@ -106,18 +106,36 @@ console.log("Total: $" + totalsum)
 // create an array of those values
 // find average of all those values
 
-var numonly = [];
+let numonly = [];
 for (var i = 0; i < finances.length; i++) {
     numonly.push (finances[i][1]);
+};
+
+function diff(numonly) {
+    return numonly.slice(1).map(function(n, i) { 
+     return n - numonly[i]; });
+  }
+
+ let differences = (diff(numonly))
+ 
+ let average = 0;
+for (var i = 0; i < differences.length; i++) {
+    average = average + differences[i];
+    
 }
-// console.log(numonly);
+
+// function nearest100(num) {
+//     return Math.round(num / 10) * 10;
+// }
+
+console.log(nearest100(average / finances.length));
+ 
 
 // sequence the values highest to lowest
 
 numonly.sort(function(a,b) {
     return a-b});
 
-// console.log(numonly)
 
 var lowest = numonly[0];
 var highest = numonly[numonly.length - 1]
@@ -128,38 +146,14 @@ console.log("Greatest Decrease in Profits: " + lowest)
 
 // select the first and last
 
-// console.log(finaces[1])
+// console.log(diff(numonly));
+// console.log(diffArr)
 
-function diff(numonly) {
-    changes = [];
-    for(var i=0; i < numonly.length-1; i++){
-        changes.push(numonly[i+1]-numonly[i]);
+// var totaldiff = 0;
+// for (var i = 0; i < diffArr.length; i++) {
+//     totaldiff = totaldiff + diffArr[i];
 
-    }
-   console.log(changes);
-}
+// }
 
-// 2nd try
+// console.log(totaldiff)
 
-function diff (arr){
-    diffArr=[];
-    for(var i=0; i<arr.length-1; i++){
-        diffArr.push(arr[i+1]-arr[i]);
-
-    }
-    return diffArr;
-}
-console.log(diff(numonly));
-
-console.log(diffArr)
-
-
-// test
-
-var totaldiff = 0;
-for (var i = 0; i < diffArr.length; i++) {
-    totaldiff = totaldiff + diffArr[i];
-
-}
-
-console.log(totaldiff)
