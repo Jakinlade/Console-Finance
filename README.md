@@ -21,7 +21,7 @@ For this project, I was given a set of financial data and asked to create a repo
 
 ## Console Log Screenshot
 
-![screenshot of website](../Console-Finance/assets/Console_Screenshot.png)
+![screenshot of website](./assets/Console_Screenshot.png)
 
 <br>
 
