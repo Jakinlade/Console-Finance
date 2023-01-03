@@ -1,14 +1,14 @@
 # Console-Finance
 
-## Code repository:
+### Code repository:
+https://github.com/Jakinlade/Failing-company-finance-data-log/settings/pages
 
-
-Deployed application:
-
+### Deployed application:
+https://jakinlade.github.io/Failing-company-finance-data-log/
 
 <br>
 
-### Description
+## Description
 For this project, I was given a set of financial data and asked to create a report on the company's performance. The report needed to include the following information:
 
 - The total number of months included in the dataset
